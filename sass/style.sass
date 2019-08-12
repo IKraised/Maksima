@@ -1,0 +1,581 @@
+@import '../../node_modules/normalize.css/normalize'
+@import '../fonts/Intro-Fonts/stylesheet.css'
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic')
+// @import '../../node_modules/slick-carousel/slick/slick';
+// @import '../../node_modules/magnific-popup/dist/magnific-popup';
+
+*,
+*:before,
+*:after
+    box-sizing: border-box
+
+body
+    margin: 0
+    min-width: 1004px
+    width: 100%
+    min-height: 100%
+    font-family: "Intro"
+    font-size: 12px
+    background-color: #fff
+//  -----container-----
+.container
+    max-width: 978px
+    margin: 0 auto
+    padding: 0 auto
+//  -----header-----
+.header
+    background-color: #e33861
+    background-image: linear-gradient(to right, #e23760 0%, #f85980 100%)
+
+.header__inner
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #e9426a
+
+.header__active
+
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 230px
+    height: 50px
+    background-color: #ce365b
+    & a
+        margin-left: 40px
+        color: #ffffff
+        font-size: 12px
+        font-weight: 400
+        line-height: 20px
+        text-transform: uppercase
+        text-decoration: none
+        letter-spacing: 0.36px
+        position: relative
+    & a:before
+        content: ''
+        position: absolute
+        background-image: url('../img/icons/calendar.svg')
+        background-repeat: no-repeat
+        background-position: center
+        width: 27px
+        height: 29px
+        top: -5px
+        left: -42px
+    & .phone:before
+        content: ''
+        position: absolute
+        background-image: url('../img/icons/phone.svg')
+        width: 30px
+        height: 30px
+        top: -5px
+        left: -42px
+    &:hover
+        text-decoration: underline
+    
+.header__active-phone
+    display: flex
+    align-items: center
+    height: 50px
+    & a
+        color: #ffa3b9
+        font-size: 14px
+        font-weight: 400
+        line-height: 20px
+        text-decoration: none
+    & a span
+        margin-left: 4px
+        color: #f3f9fa
+        font-size: 20px
+        font-weight: 700
+
+.right__phone
+    margin-left: 60px
+
+//  -----navigatin-----
+
+.header__nav-logo
+    margin-bottom: 10px
+.header__nav-inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 35px
+
+.nav__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    list-style: none
+    & li
+        margin-left: 60px
+        text-decoration: none
+        position: relative
+    & li:first-child
+        margin-left: 0px
+    & .link
+        color: #5b5b5b
+        font-family: Intro
+        font-size: 12px
+        font-weight: 400
+        line-height: 20px
+        text-transform: uppercase
+        letter-spacing: 0.36px
+        text-decoration: none
+        transition: all 0.2s ease-in-out
+    & .link:before
+        content: ''
+        position: absolute
+        bottom: 35px
+        left: 50%
+        width: 50px
+        height: 10px
+        border-radius: 50%
+        margin-left: -25px
+        background: #eeeeee
+        z-index: 22
+        transition: all 0.2s ease-in-out
+    & .link:hover    
+        color: #e34168
+    & .link:hover .nav__icon
+        transform: translateY(-20px)
+        background-color: #f25077
+    & .link:hover:before
+        bottom: 35px
+        width: 40px
+        height: 10px
+        margin-left: -20px
+        border-radius: 50%
+        background: #eeeeee
+
+    
+.nav__icon
+    display: block
+    background-color: #20ccde
+    border-radius: 50%
+    width: 60px
+    height: 60px
+    text-align: center
+    line-height: 80px
+    margin-bottom: 15px
+    margin: auto
+    position: relative
+    z-index: 88
+    transition: all 0.3s ease-in-out
+
+// -----slider-----
+.slider
+    overflow: hidden
+.wrapper
+    overflow: hidden
+    width: 1018PX
+    margin: 0 auto
+    padding: 0 auto
+.slick-slide
+    margin: 0 30px
+.slider__wrapper
+    position: relative
+    & img
+    max-width: 978px
+    height: 400px
+.slider__inner
+    display: flex
+    width: 100%
+    z-index: 33
+    & .slider__inner-wrap
+        position: absolute
+        top: 95px
+        left: -20px
+        width: 396px
+        height: 220px
+        background-color: #d93760
+        opacity: 0.95
+        z-index: 3
+        color: #fff
+.slider__inner-box
+    width: 303px
+    margin-top: 35px
+    margin-left: 35px
+.slider__inner-tile
+    color: #ffffff
+    font-family: "Intro Regular Alt"
+    font-size: 32px
+    font-weight: 400
+    line-height: 1
+    margin-bottom: 20px
+.slider__inner-text
+    color: #f7ccd6
+    font-family: 'Open Sans', sans-serif
+    font-size: 14px
+    font-weight: 300
+    line-height: 20px
+    letter-spacing: 0.5px
+
+// -----ivent-----
+
+.ivent
+    margin-top: 50px
+    background-image: url('../img/bg-ivent.jpg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+    padding-top: 20px
+    position: relative
+    overflow: hidden
+    & .animation
+        position: absolute
+        bottom: 100px
+        right: 0px
+        z-index: 22
+        -webkit-animation: linear 2.8s men infinite
+@-webkit-keyframes men
+    0%
+        right: -700px
+    40%
+        z-index: 22
+    41%
+        z-index: 24
+    43%
+        z-index: 22
+    70%
+        z-index: 22
+    72%
+        z-index: 24
+
+    100%
+        bottom: -100px
+        right: 1600px
+       
+.ivent__title
+    text-align: center
+    color: #626161
+    font-family: 'Intro Regular Alt'
+    font-size: 34px
+    font-weight: 400
+    line-height: 45px
+    margin-bottom: 17px
+.ivent__inner
+    display: flex
+    justify-content: space-between
+.flag-1
+    z-index: 23
+    margin-top: 64px
+.flag-2
+    z-index: 23
+    margin-top: 40px
+.flag-3
+    z-index: 23 
+.ivent__box
+    position: relative
+.ivent__box-date
+    position: absolute
+    top: 10px
+    left: 10px
+    color: #ffffff
+    font-family: "Intro Bold Alt"
+    font-size: 30px
+    font-weight: 400
+    line-height: 45px
+    transform: rotate(-4deg)
+.ivent__box-name
+    position: absolute
+    top: 65px
+    left: 45px
+    color: #ffffff
+    font-family: "Intro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 22px
+    transform: rotate(-10deg)
+
+// ----- calk -----
+
+.calc
+    margin-top: 44px
+.calc__text-box
+    text-align: center
+.calc__title
+    color: #626161
+    font-family: "Intro Regular Alt"
+    font-size: 34px
+    font-weight: 400
+    line-height: 45px
+.calc__text
+    color: #626161
+    font-family: "Intro"
+    font-size: 22px
+    font-weight: 300
+    line-height: 35px
+.calc__inner-box
+    width: 978px
+    height: 396px
+    background-color: #1cbdda
+.calc__age-char
+    display: flex
+    color: #ffffff
+    font-family: "Intro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 45px
+    padding-top: 49px
+    margin-left: 200px
+    & input
+        margin-left: 13px
+        width: 80px
+        height: 42px
+        outline: none
+        background: #12a9c4
+        border: none
+        box-shadow: 0 0 0 2px #0d9bbd inset
+        text-align: center
+    & input:focus
+        background: #fff
+.age
+    margin-left: 35px
+.growth
+    margin-left: 80px
+.calc__sex-char
+    display: flex
+    margin-top: 40px
+    margin-left: 170px
+    color: #ffffff
+    font-family: "Intro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 45px
+.calc__sex
+    display: flex
+    margin-left: 12px
+    width: 500px
+    & label
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 180px
+        height: 40px
+        border-radius: 20px
+        border: 2px solid #41edff
+        color: #ffffff
+        font-family: "Open Sans"
+        font-size: 13px
+        font-weight: 700
+        margin-right: 20px
+        cursor: pointer
+    & input
+        display: none
+    & label:hover
+        background-color: #41edff
+        color: #fff
+        border: none
+    &  input:checked + label
+        background-color: #ffffff
+        color: #1ec2dc
+        border: none
+.calc__body-char
+    display: flex
+    margin-top: 40px
+    margin-left: 108px
+    color: #ffffff
+    font-family: "Intro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 45px
+.calc__body
+    display: flex
+    margin-left: 12px
+    & label
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 180px
+        height: 40px
+        border-radius: 20px
+        border: 2px solid #41edff
+        color: #ffffff
+        font-family: "Open Sans"
+        font-size: 13px
+        font-weight: 700
+        margin-right: 20px
+        cursor: pointer
+    & input
+        display: none
+    & label:hover
+        background-color: #41edff
+        color: #fff
+        border: none
+    &  input:checked + label
+        background-color: #ffffff
+        color: #1ec2dc
+        border: none
+.calc__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    text-decoration: none
+    width: 251px
+    height: 55px
+    border-radius: 3px  
+    margin-top: 38px
+    border: 2px solid #fff
+    color: #ffffff
+    font-family: "Intro Regular Alt"
+    font-size: 22px
+    font-weight: 400
+    &:hover
+        background-color: #41edff
+        color: #fff
+
+// ----- walking -----
+
+.walking 
+    margin-top: 50px
+    margin-bottom: -1px
+.walking__table
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+.table__box
+    width: 300px
+    height: 70px
+    top: 50px
+    left: 38.5%
+    position: absolute
+.table__title
+    color: #626161
+    font-family: Intro
+    font-size: 20px
+    font-weight: 400
+    line-height: 45px
+.table__text
+    color: #464343
+    font-size: 14px
+    font-weight: 400
+    font-family: "Open Sans"
+    line-height: 25px
+    & span
+        color: #1bbbd9
+        font-family: "Intro Bold Alt"
+        font-size: 20px
+        font-weight: 700
+        line-height: 25px
+
+// ----- footer -----
+.footer
+    display: flex
+    height: 200px
+    background-color: #e33861
+    background-image: linear-gradient(to right, #e23760 0%, #f85980 100%)
+
+.footer__inner
+    display: flex
+    justify-content: space-between
+    min-width: 978px
+    margin-top: 47px
+.footer__copyright
+    max-width: 300px
+.footer__copyright-text
+    color: #ffffff
+    font-family: "Intro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 20px
+    margin-bottom: 20px
+.footer__copyright-adress
+    color: #f3f9fa
+    font-family: "Open Sans"
+    font-size: 13px
+    font-weight: 400
+    line-height: 1
+    margin-bottom: 20px
+    & p
+        margin-left: 13px
+        color: #f3f9fa
+    & span
+        margin-left: 5px
+        font-weight: 700
+
+.footer__about
+    margin-left: -40px
+.footer__about-text
+    color: #ffffff
+    font-family: "Intro"
+    font-size: 18px
+    font-weight: 400
+    line-height: 20px
+    margin-bottom: 20px
+.footer__about-timetable
+    width: 124px
+    color: #ffffff
+    font-size: 13px
+    font-family: "Open Sans"
+    font-weight: 400
+    line-height: 1
+    & span
+        font-weight: 700
+        line-height: 1
+        font-size: 13px
+        font-weight: 700
+
+.footer__link-social
+.footer__link-copy
+    color: #ffffff
+    font-family: "Open Sans"
+    font-size: 10px
+    font-weight: 400
+    & span
+        font-size: 12px
+        font-weight: 700
+        line-height: 20px
+
+.footer__link-social
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+    & a
+        text-decoration: none
+        margin-right: 18px
+        &:last-child
+            margin-right: 0
+.social__icon
+    width: 46px
+    height: 46px
+    background-color: #e33861
+    border-radius: 50%
+    position: relative
+.vk:before
+    content: "\f189"
+    font-family: 'icomoon'
+    position: absolute
+    font-size: 24px
+    color: #ffffff
+    top: 10px
+    left: 9px
+.facebook:before
+    content: "\f09a"
+    font-family: 'icomoon'
+    position: absolute
+    font-size: 24px
+    color: #ffffff
+    top: 10px
+    left: 15px
+.class:before
+    content: "\f263"
+    font-family: 'icomoon'
+    position: absolute
+    font-size: 24px
+    color: #ffffff
+    top: 10px
+    left: 14px
+.youtube:before
+    content: "\f167"
+    font-family: 'icomoon'
+    position: absolute
+    font-size: 24px
+    color: #ffffff
+    top: 10px
+    left: 12px
+    
